@@ -1,0 +1,192 @@
+* {
+	/* elimina marcos por defecto*/
+	padding:0;
+	margin:0;
+}
+
+ul li{
+    list-style: none;
+}
+
+.info_central{
+    width:75%;
+    float:left;
+    padding-left: 5%;
+    
+}
+
+footer {
+    width:75%;
+    float:left;
+    padding-left: 5%;
+    font-size:75%;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*titulo*/
+.nombre{
+    color: white;
+    background-color:#7A7979;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 1.5em;
+    width:80%;
+	float:left;
+    text-align:center;
+}
+/*architect*/
+.nombre p {
+    letter-spacing: 20px;
+}
+
+
+
+/*clase work experience*/
+
+/*fechas*/
+.work_experience h4 {
+    width:30%;
+    float:left; 
+}
+/*fotos*/
+.arteco, .novarte, .cobe, .sml, .strato{
+    width:20%;
+	float: left; 
+}
+/*textos*/
+.work_experience p {
+    width: 30%;
+	/* */
+}
+.work_experience ul li p,.work_experience ul li h4{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    list-style: none;
+    font-size: 1em;
+    float:left;
+}
+
+
+
+
+/*clase education*/
+/*fechas*/
+.education h4 {
+    width:30%;
+	float:left; 
+}
+
+.education ul li p,.education ul li h4{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    list-style: none;
+}
+/*textos*/
+.education p {
+    width:45%;
+    float:left; 
+}
+.education ul li p, .education ul li h4{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    list-style: none;
+}
+
+
+
+
+
+
+/*clase didactic*/
+.didactic_experience_and_prize h4{
+    width:30%;
+	float:left; 
+}
+.didactic_experience_and_prize p{
+    width:45%;
+    float:left; 
+}
+.didactic_experience_and_prize ul li p, .didactic_experience_and_prize ul li h4{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    list-style: none;
+}
+
+
+
+
+
+.work_experience h2 {
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 1em;  
+    width:75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.education h2 {
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 1em; 
+    width:75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.didactic_experience_and_prize h2{
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 1em; 
+    width:75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+
+/*LATERAL*/
+.barra_lateral{
+    width:18%;
+    float:right;
+    background-color: #EEE8D0;
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.barra_lateral article{
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 5%;
+}
+
+
+.barra_lateral article li{
+    text-align:left;
+    padding-left: 5%;
+    list-style: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.barra_lateral article dl dd{
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.barra_lateral article h5{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 1em;
+}
+
+.barra_lateral .perfil{
+    max-width: 100%;
+}
