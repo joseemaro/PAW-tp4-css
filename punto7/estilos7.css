@@ -1,27 +1,25 @@
 * {
-	/* elimina marcos por defecto*/
-	padding:0;
-	margin:0;
+    /* elimina marcos por defecto*/
+    padding: 0;
+    margin: 0;
 }
 
-ul li{
+ul li {
     list-style: none;
 }
 
-.info_central{
-    width:75%;
-    float:left;
+.info_central {
+    width: 75%;
+    float: left;
     padding-left: 5%;
-    
 }
 
 footer {
-    width:75%;
-    float:left;
+    width: 75%;
+    float: left;
     padding-left: 5%;
-    font-size:75%;
+    font-size: 75%;
 }
-
 
 a {
     text-decoration: none;
@@ -29,164 +27,261 @@ a {
     font-weight: bold;
 }
 
+
 /*titulo*/
-.nombre{
+
+.nombre {
     color: white;
-    background-color:#7A7979;
+    background-color: #7A7979;
     font-family: "Lucida Console", Courier, monospace;
     font-size: 1.5em;
-    width:80%;
-	float:left;
-    text-align:center;
+    width: 80%;
+    float: left;
+    text-align: center;
 }
+
+
 /*architect*/
+
 .nombre p {
     letter-spacing: 20px;
 }
 
 
-
 /*clase work experience*/
 
+.work_experience {
+    background: url("fotos/work_experience.JPG") no-repeat center;
+    background-position: top 1%;
+    background-size: auto auto;
+    background-position-x: 35%;
+}
+
+
 /*fechas*/
+
 .work_experience h4 {
-    width:30%;
-    float:left; 
+    width: 30%;
+    float: left;
 }
+
+
 /*fotos*/
-.arteco, .novarte, .cobe, .sml, .strato{
-    width:20%;
-	float: left; 
+
+.arteco,
+.novarte,
+.cobe,
+.sml,
+.strato {
+    width: 20%;
+    float: left;
 }
+
+
 /*textos*/
+
 .work_experience p {
     width: 30%;
-	/* */
+    /* */
 }
-.work_experience ul li p,.work_experience ul li h4{
+
+.work_experience ul li p,
+.work_experience ul li h4 {
     padding-top: 2%;
     padding-bottom: 2%;
     list-style: none;
     font-size: 1em;
-    float:left;
+    float: left;
 }
-
-
 
 
 /*clase education*/
+
+.education {
+    background: url("fotos/education.JPG") no-repeat bottom;
+    background-size: auto auto;
+    background-position-x: 35%;
+    background-position-y: 92.5%;
+}
+
+
 /*fechas*/
+
 .education h4 {
-    width:30%;
-	float:left; 
+    width: 30%;
+    float: left;
 }
 
-.education ul li p,.education ul li h4{
+.education ul li p,
+.education ul li h4 {
     padding-top: 2%;
     padding-bottom: 2%;
     list-style: none;
 }
+
+
 /*textos*/
+
 .education p {
-    width:45%;
-    float:left; 
+    width: 45%;
+    float: left;
 }
-.education ul li p, .education ul li h4{
+
+.education ul li p,
+.education ul li h4 {
     padding-top: 2%;
     padding-bottom: 2%;
     list-style: none;
 }
-
-
-
-
 
 
 /*clase didactic*/
-.didactic_experience_and_prize h4{
-    width:30%;
-	float:left; 
+
+.didactic_experience_and_prize {
+    background: url("fotos/didactic.JPG") no-repeat bottom;
+    background-size: auto auto;
+    background-position-x: 35%;
+    background-position-y: 92.5%;
 }
-.didactic_experience_and_prize p{
-    width:45%;
-    float:left; 
+
+.didactic_experience_and_prize h4 {
+    width: 30%;
+    float: left;
 }
-.didactic_experience_and_prize ul li p, .didactic_experience_and_prize ul li h4{
+
+.didactic_experience_and_prize p {
+    width: 45%;
+    float: left;
+}
+
+.didactic_experience_and_prize ul li p,
+.didactic_experience_and_prize ul li h4 {
     padding-top: 2%;
     padding-bottom: 2%;
     list-style: none;
 }
-
-
-
-
 
 .work_experience h2 {
     text-align: center;
     font-family: "Lucida Console", Courier, monospace;
-    font-size: 1em;  
-    width:75%;
-    padding-top: 2%;
+    font-size: 1em;
+    width: 75%;
+    padding-top: 8%;
     padding-bottom: 2%;
-
 }
 
 .education h2 {
     text-align: center;
     font-family: "Lucida Console", Courier, monospace;
-    font-size: 1em; 
-    width:75%;
-    padding-top: 2%;
+    font-size: 1em;
+    width: 72.5%;
+    padding-top: 50%;
     padding-bottom: 2%;
 }
 
-.didactic_experience_and_prize h2{
+.didactic_experience_and_prize h2 {
     text-align: center;
     font-family: "Lucida Console", Courier, monospace;
-    font-size: 1em; 
-    width:75%;
-    padding-top: 2%;
+    font-size: 1em;
+    width: 75%;
+    padding-top: 45%;
     padding-bottom: 2%;
 }
-
 
 
 /*LATERAL*/
-.barra_lateral{
-    width:18%;
-    float:right;
+
+.barra_lateral {
+    width: 18%;
+    float: right;
     background-color: #EEE8D0;
     margin-top: 0;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 0%;
 }
-.barra_lateral article{
+
+.barra_lateral article {
     text-align: center;
-    padding-top: 15%;
+    padding-top: 0%;
     padding-bottom: 5%;
 }
 
-
-.barra_lateral article li{
-    text-align:left;
-    padding-left: 5%;
+.barra_lateral article li {
+    text-align: left;
+    padding-left: 15%;
     list-style: none;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
 }
-.barra_lateral article dl dd{
+
+.barra_lateral article dl dd {
     text-align: left;
     padding-left: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
-.barra_lateral article h5{
-    padding-top: 5%;
+.barra_lateral article h5 {
+    padding-top: 20%;
     padding-bottom: 5%;
     font-size: 1em;
 }
 
-.barra_lateral .perfil{
+.barra_lateral .perfil {
     max-width: 100%;
+}
+
+.informations {
+    background: url("fotos/personal.JPG") no-repeat left;
+    background-size: auto auto;
+    background-position-y: 85%;
+}
+
+.informations h5 {
+    background: url("fotos/informations.JPG") no-repeat top;
+    background-size: auto auto;
+}
+
+.lenguages {
+    background: url("fotos/lenguajes.JPG") no-repeat center;
+    background-size: auto auto;
+    background-position-y: 5%;
+}
+
+.lenguages ul li {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.computer_skills h5 {
+    background: url("fotos/computer.JPG") no-repeat center;
+    background-size: auto auto;
+    background-position-y: 5%;
+}
+
+.computer_skills {
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.uno {
+    background: url("fotos/1.JPG") no-repeat right;
+}
+
+.dos {
+    background: url("fotos/2.JPG") no-repeat right;
+}
+
+.tres {
+    background: url("fotos/3.JPG") no-repeat right;
+}
+
+.cuatro {
+    background: url("fotos/4.JPG") no-repeat right;
+}
+
+.cinco {
+    background: url("fotos/5.JPG") no-repeat right;
 }
