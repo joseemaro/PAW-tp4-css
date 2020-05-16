@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -83,6 +79,10 @@ tr:last-child{
     background-color: cornflowerblue;
 }
 
-.header th{
-    border-right: 2px solid black;
+th[scope="row"]{
+    border-right: 1px solid black;
+}
+
+.header th {
+    border-right: 1px solid black;
 }
