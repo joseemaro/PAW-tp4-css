@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Appointment{% endblock %}
+
+{% block header %}
+{{ include('nav.views.html') }}
+{% endblock %}
+
+{% block head %}
+{{ parent() }}
+<meta name="keywords" content="PAW,2020,Templates,PHP">
+{% endblock %}
+
+{% block main %}
+<form class="edit" action="/upt_appointment" method="post" enctype="multipart/form-data">
+    <input type="id" name="id" readonly value={{ ap.id }} style="display: none">
+    <label>Nombre: <input type="text" name="nombre" value="{{ ap.nombre }}"></label><br>
+    <label>Email: <input type="email" name="email" value={{ ap.email }}></label><br>
+    <label>Telefono: <input type="tel" name="telefono" value={{ ap.telefono }}></label><br>
+    <label>Edad: <input type="text" name="edad" maxlength="2" max="99" value={{ ap.edad }}></label><br>
+    <label>Talla de calzado: <input type="text" name="talla_calzado" maxlength="2" value={{ ap.talla_calzado }}></label><br>
+    <label>Altura: <input type="range" name="altura" min="100" max="200" step="10" value={{ ap.altura }} list="tickmarks">
+        <datalist id="tickmarks">
+            <option value="100" label="1mts">
+            <option value="110">
+            <option value="120">
+            <option value="130">
+            <option value="140">
+            <option value="150" label="1,50">
+            <option value="160">
+            <option value="170">
+            <option value="180">
+            <option value="190">
+            <option value="200" label="2mts">
+        </datalist></label><br>
+    <label>Fecha de nacimiento: <input type="date" name="fecha_nacimiento" value={{ ap.fecha_nacimiento }}></label><br>
+    <label>Color de pelo: <select required name="color_pelo">
+        <option value="" selected disabled>seleccione el color</option>
+        <option>morocho</option>
+        <option>rubio</option>
+        <option>colorado</option>
+        <option>castanio</option>
+    </select></label><br>
+    <label>Fecha de turno: <input type="date" name="fecha_turno" value={{ ap.fecha_turno }}></label><br>
+    <label>Horario de turno(hh:min): <input type="time" min="08:00" max="17:00" step="900" name="horario_turno" value={{ ap.horario_turno }}></label><br>
+    {% if (ap.diagnostico) %}
+        <label>Diagnostico</label><br>
+        <img width="40%" src="data:diagnostico/png;base64,{{ diagnostico64 }}" />
+    {% endif %}
+
+    <br><input type="submit" value="Enviar" />
+    <button class="button" type="button" onclick="location.href='list_appointments'">Cancelar</button>
+</form>
+{% endblock %}

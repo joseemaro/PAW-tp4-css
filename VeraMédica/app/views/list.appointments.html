@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}List Appointments{% endblock %}
+
+{% block header %}
+{{ include('nav.views.html') }}
+{% endblock %}
+
+{% block head %}
+{{ parent() }}
+<meta name="keywords" content="PAW,2020,Templates,PHP">
+{% endblock %}
+
+{% block main %}
+        <section>
+            <h1>Listar turnos</h1>
+            {% if appointments %}
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Nombre del paciente</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                    </thead>
+            {% else %}
+                <p> There is no registered appointments at the moment.</p>
+            {% endif %}
+
+                {% for appointment in appointments %}
+                    <tbody>
+                        <tr>
+                            <td>{{ appointment.fecha_turno }}</td>
+                            <td>{{ appointment.horario_turno }}</td>
+                            <td>{{ appointment.nombre }}</td>
+                            <td>{{ appointment.telefono }}</td>
+                            <td>{{ appointment.email }}</td>
+                            <td>
+                                <form method="get" id="show-appointment-{{ appointment.id }}" action="view_appointment">
+                                    <input type="hidden" name="id" value={{ appointment.id }}>
+                                    <button type="submit" form="show-appointment-{{ appointment.id }}">View</button>
+                                </form>
+                                <form method="get" id="edit-appointment-{{ appointment.id }}" action="edit_appointment">
+                                    <input type="hidden" name="id" value={{ appointment.id }}>
+                                    <button type="submit" form="edit-appointment-{{ appointment.id }}">Edit</button>
+                                </form>
+                                <form method="get" id="destroy-appointment-{{ appointment.id }}" action="del_appointment" onSubmit="return confirm('Desea eliminar el turno?');">
+                                    <input type="hidden" name="id" value={{ appointment.id }}>
+                                    <button type="submit" form="destroy-appointment-{{ appointment.id }}">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+
+        </section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block header %}
+{{ include('nav.views.html') }}
+{% endblock %}
+
+{% block head %}
+{{ parent() }}
+<meta name="keywords" content="PAW,2020,Templates,PHP">
+{% endblock %}
+
+{% block main %}
+    <section id="errors">
+        <h1>Errores</h1>
+        {% if respuesta %}
+        <ul>
+            {% for error in respuesta %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>
+{% endblock %}

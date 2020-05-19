@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Error Image{% endblock %}
+
+{% block header %}
+{{ include('nav.views.html') }}
+{% endblock %}
+
+{% block head %}
+{{ parent() }}
+<meta name="keywords" content="PAW,2020,Templates,PHP">
+{% endblock %}
+
+{% block main %}
+<form class="edit" action="/save_appointment" method="post" enctype="multipart/form-data">
+    <h1>Imagen incorrecta (el tamaño es superior a 10 MB)</h1>
+    <label>Nombre: <input type="text" name="nombre" readonly value={{ ap.nombre }}></label><br>
+    <label>Email: <input type="email" name="email" readonly value={{ ap.email }}></label><br>
+    <label>Telefono: <input type="tel" name="telefono" readonly value={{ ap.telefono }}></label><br>
+    <label>Edad: <input type="text" name="edad" readonly value={{ ap.edad }}></label><br>
+    <label>Talla de calzado: <input type="text" name="talla_calzado" readonly value={{ ap.talla_calzado }}></label><br>
+    <label>Altura: <input type="number" name="altura" readonly value={{ ap.altura }}></label><br>
+    <label>Fecha de nacimiento: <input type="date" name="fecha_nacimiento" readonly value={{ ap.fecha_nacimiento }}></label><br>
+    <label>Color de pelo: <input type="text" name="color_pelo" readonly value={{ ap.color_pelo }}></label><br>
+    <label>Fecha de turno: <input type="date" name="fecha_turno" readonly value={{ ap.fecha_turno }}></label><br>
+    <label>Horario de turno(hh:min): <input type="time" name="horario_turno" readonly value={{ ap.horario_turno }}></label><br>
+    <label>Diagnostico <input type="file" name="diagnostico" accept="image/jpeg, image/x-png, image/x-jpg"></label><br>
+
+    <input type="submit" value="Enviar" />
+</form>
+{% endblock %}
