@@ -1,0 +1,8 @@
+*.idea/
+*.png
+*.jpg
+*.jpeg
+*appointmets.json
+*VeraMédica/app/views/cache/
+*vendor/
+*logs/
