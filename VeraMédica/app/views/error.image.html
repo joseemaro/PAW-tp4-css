@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block main %}
-<form class="edit" action="/save_appointment" method="post" enctype="multipart/form-data">
+<form class="general-form" action="/save_appointment" method="post" enctype="multipart/form-data">
     <h1>Imagen incorrecta (el tamaño es superior a 10 MB)</h1>
     <label>Nombre: <input type="text" name="nombre" readonly value={{ ap.nombre }}></label><br>
     <label>Email: <input type="email" name="email" readonly value={{ ap.email }}></label><br>

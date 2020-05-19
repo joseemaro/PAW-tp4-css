@@ -27,7 +27,7 @@
                     </tr>
                     </thead>
             {% else %}
-                <p> There is no registered appointments at the moment.</p>
+                <p> No hay turnos registrados hasta el momento </p>
             {% endif %}
 
                 {% for appointment in appointments %}
@@ -41,15 +41,15 @@
                             <td>
                                 <form method="get" id="show-appointment-{{ appointment.id }}" action="view_appointment">
                                     <input type="hidden" name="id" value={{ appointment.id }}>
-                                    <button type="submit" form="show-appointment-{{ appointment.id }}">View</button>
+                                    <button class ="table-button" type="submit" form="show-appointment-{{ appointment.id }}">View</button>
                                 </form>
                                 <form method="get" id="edit-appointment-{{ appointment.id }}" action="edit_appointment">
                                     <input type="hidden" name="id" value={{ appointment.id }}>
-                                    <button type="submit" form="edit-appointment-{{ appointment.id }}">Edit</button>
+                                    <button class ="table-button" type="submit" form="edit-appointment-{{ appointment.id }}">Edit</button>
                                 </form>
                                 <form method="get" id="destroy-appointment-{{ appointment.id }}" action="del_appointment" onSubmit="return confirm('Desea eliminar el turno?');">
                                     <input type="hidden" name="id" value={{ appointment.id }}>
-                                    <button type="submit" form="destroy-appointment-{{ appointment.id }}">Delete</button>
+                                    <button class ="table-button" type="submit" form="destroy-appointment-{{ appointment.id }}">Delete</button>
                                 </form>
                             </td>
                         </tr>
