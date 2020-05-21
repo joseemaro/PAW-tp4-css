@@ -169,9 +169,10 @@ p {
 }*/
 
 .container {
-    width: 80vw;
+    width: 100vw;
     min-height: 60vh;
     background-size: cover;
     background: url("../css/resources/veramedica.svg") no-repeat;
-    margin-left: 65vh;
+
+    /*margin-left: 65vh;*/
 }

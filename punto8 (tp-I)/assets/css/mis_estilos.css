@@ -27,31 +27,31 @@ td, th {
 }
 
 #html {
-    background-color: #E36B2C;
+    background-color: rgb(230, 145, 56);
 }
 
 #php_1 {
-    background-color: #6495ED;
+    background-color: rgb(17, 85, 204);
 }
 
 #js {
-    background-color: rgb(245, 213, 120 );
+    background-color: rgb(255, 255, 0);
 }
 
 #css {
-    background-color: rgb(0, 209, 255);
+    background-color: rgb(109, 158, 235);
 }
 
 #php_2 {
-    background-color: steelblue;
+    background-color: rgb(28, 69, 135);
 }
 
 #canvas {
-    background-color: #8B0000;
+    background-color: rgb(153, 0, 0);
 }
 
 #final {
-    background-color: blue;
+    background-color: rgb(17, 85, 204);
     color: white;
     text-align: right ;
 }
@@ -66,6 +66,26 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+#html img {
+    width: 50%;
+    height: 80%;
+}
+
+#php_1 img, #php_2 img {
+    width: 50%;
+    height: 50%;
+}
+
+#canvas img {
+    width: 50%;
+    height: 90%;
+}
+
+#js img {
+    width: 40%;
+    height: 50%;
 }
 
 #titulos-tps {
