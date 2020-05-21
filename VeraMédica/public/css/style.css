@@ -159,7 +159,7 @@ p {
 
 #error-500 {
     background: url("resources/error500.png");
-    background-size: cover;
+    background-size: 100vw 100vh;
 }
 
 #error-404 {
