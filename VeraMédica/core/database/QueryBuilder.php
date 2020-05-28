@@ -46,9 +46,10 @@ class QueryBuilder
      */
     public function find($table, $id)
     {
-        $sql = "SELECT * FROM {$table} WHERE id={$id};";
+        $sql = "select * from $table where id = :id;";
         try {
             $statement = $this->pdo->prepare($sql);
+            $statement->bindValue(":id", $id);
             $statement->execute();
             return $statement->fetch(PDO::FETCH_ASSOC);
         } catch (Exception $e) {
@@ -65,14 +66,10 @@ class QueryBuilder
      */
     public function findturno($table, $fecha_turno, $horario_turno)
     {
-        $sql = sprintf(
-            'SELECT * , COUNT(*) as \'cantidad\' FROM %s WHERE fecha_turno=\'%s\' AND horario_turno=\'%s\'',
-            $table,
-            $fecha_turno,
-            $horario_turno
-        );
         try {
-            $statement = $this->pdo->prepare($sql);
+            $statement = $this->pdo->prepare("select *, count(*) from $table where fecha_turno = :fecha_turno and horario_turno = :horario_turno");
+            $statement->bindValue(":fecha_turno", $fecha_turno);
+            $statement->bindValue(":horario_turno", $horario_turno);
             $statement->execute();
             return $statement->fetch(PDO::FETCH_ASSOC);
         } catch (Exception $e) {
@@ -88,9 +85,10 @@ class QueryBuilder
      */
     public function delete($table, $id)
     {
-        $sql = "DELETE FROM {$table} where id={$id};";
+        $sql = "delete from $table where id = :id;";
         try {
             $statement = $this->pdo->prepare($sql);
+            $statement->bindValue(":id", $id);
             $statement->execute();
         } catch (Exception $e) {
             $this->sendToLog($e);

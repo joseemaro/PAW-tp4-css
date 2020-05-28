@@ -140,7 +140,7 @@ class Appointment extends Model
             $booleano= false;
         } else {
             $row = $this->db->findturno($this->table, $this->parametros['fecha_turno'], $valor);
-            if ($row['cantidad'] > 0) {
+            if ($row['count'] > 0) {
                 $error = "Ya existe un turno en esa fecha y horario";
                 array_push($this->msg, $error);
                 $booleano = false;
